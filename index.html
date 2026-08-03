@@ -105,12 +105,72 @@ footer{margin-top:3.5rem;padding-top:1.4rem;border-top:1px solid var(--line);
   .hero{margin:-2.4rem -1.15rem 0;padding:2.5rem 1.15rem 1.6rem}
   .btn{flex:1 1 100%;justify-content:center}
 }
+/* ── phone ─────────────────────────────────────────────────────────────── */
 @media (max-width:34rem){
   .wrap{padding:2.4rem 1.15rem 3.5rem}
   h1{font-size:1.6rem}
   .avatar{width:82px;height:82px}
   body{font-size:15.5px}
 }
+
+/* ── tablet ────────────────────────────────────────────────────────────────
+   Still one column, but the column itself gets room and the type steps up. */
+@media (min-width:48rem){
+  .wrap{max-width:52rem;padding:4rem 2.2rem 5rem}
+  h1{font-size:2.4rem}
+  .avatar{width:124px;height:124px}
+  .lede{font-size:1.16rem}
+  header{gap:1.8rem}
+}
+
+/* ── desktop ───────────────────────────────────────────────────────────────
+   The fix for "it reads like a phone feed on a monitor": the shell widens and
+   card groups become a real grid, so vertical scroll stops being the only axis.
+   Prose sections deliberately do NOT widen past a readable measure — a 70rem
+   line of body text is worse, not better. */
+@media (min-width:62rem){
+  .wrap{max-width:64rem;padding:0 2.6rem 5rem}
+  .wrap:not(.flash){padding-top:4.5rem}
+  h1{font-size:2.75rem}
+  .avatar{width:150px;height:150px}
+  header{gap:2.2rem}
+  .lede{font-size:1.24rem;max-width:44rem}
+  h2{margin:3.2rem 0 1.1rem}
+  .sec.items .sec-body{display:grid;grid-template-columns:1fr 1fr;
+    gap:1.4rem 2.4rem;align-items:start}
+  .sec.items .item{margin-bottom:0}
+  .sec.flow .sec-body{max-width:46rem}
+  .tags li{font-size:.88rem}
+  .hero{margin:0 -2.6rem;padding:4.6rem 2.6rem 3rem}
+  .contact{gap:.8rem 2.6rem}
+}
+
+/* ── wide desktop ──────────────────────────────────────────────────────── */
+@media (min-width:88rem){
+  .wrap{max-width:74rem}
+  .sec.items .sec-body{grid-template-columns:repeat(3,1fr)}
+  .hero{margin:0 -3rem;padding:5.2rem 3rem 3.4rem}
+}
+
+/* ── LinkedIn card ─────────────────────────────────────────────────────────
+   A local stand-in for an embed. LinkedIn sends X-Frame-Options: DENY, so a
+   profile cannot be iframed at all, and their official badge is a script served
+   from LinkedIn that would report every visitor to this page back to them. This
+   is self-contained: same click target, nobody tracked. */
+.li{display:flex;gap:1.1rem;align-items:center;flex-wrap:wrap;
+  background:var(--panel);border:1px solid var(--line);border-radius:.9rem;
+  padding:1.15rem 1.3rem;text-decoration:none;color:inherit;
+  transition:border-color .18s ease,transform .18s ease,box-shadow .18s ease}
+.li:hover{border-color:var(--accent);transform:translateY(-2px);
+  box-shadow:0 8px 24px var(--glow)}
+.li .mark{flex:none;width:42px;height:42px;border-radius:.45rem;background:#0a66c2;
+  color:#fff;font-weight:800;font-size:1.18rem;display:flex;align-items:center;
+  justify-content:center;font-family:var(--sans);letter-spacing:-.04em}
+.li .txt{flex:1 1 12rem;min-width:0}
+.li .txt b{display:block;font-size:1.02rem}
+.li .txt span{font-size:.87rem;color:var(--faint);font-family:var(--mono);
+  overflow-wrap:anywhere}
+.li .go{flex:none;color:var(--accent);font-weight:650;font-size:.9rem}
 </style></head><body><div class="wrap flash">
 <div class="hero">
 <header>
@@ -120,16 +180,13 @@ footer{margin-top:3.5rem;padding-top:1.4rem;border-top:1px solid var(--line);
 <ul class="cta"><li><a class="btn primary" href="https://www.linkedin.com/in/matthhaave" rel="noopener">See my work on LinkedIn <span class="arw">&rarr;</span></a></li><li><a class="btn ghost" href="mailto:matthaave83@gmail.com">Get in touch</a></li></ul>
 </div>
 <ul class="stats"><li><b>20 yrs</b><span>around technology</span></li><li><b>Multi-node</b><span>environment run solo</span></li><li><b>24/7</b><span>self-healing uptime</span></li><li><b>Remote</b><span>open to it</span></li></ul>
-<h2>What I do</h2>
-<p>I design, build, and run a private compute environment end to end — self-healing services, scheduled automation, monitoring that tells me when something is wrong, encrypted backups, and locally-hosted AI models. It spans several machines and it stays up on its own.</p><p>Before that, and alongside it, I built the internal tools people actually use day to day: intranet spaces, CRM pages, and small utilities that remove repeated manual work. The hard part of an internal tool is rarely the technology — it's understanding the work well enough that nobody needs training to use it.</p>
-<h2>How I work</h2>
-<p>A claim you can't execute is a guess. Everything I build has a test that tries to break it, and nothing counts as working until that test passes. I reboot the machine rather than assume the service comes back.</p><p>I use AI models as a force multiplier and say so plainly. They collapse the distance between not understanding something and having a working version to test. They don't decide what to build, and they don't carry the responsibility when the result is wrong — that part stays mine.</p>
-<h2>Working with</h2>
-<ul class="tags"><li>Linux</li><li>Containers</li><li>systemd</li><li>Mesh networking</li><li>Monitoring &amp; alerting</li><li>Encrypted backups</li><li>Bash &amp; Python</li><li>Self-hosted LLMs</li><li>Hardware &amp; imaging</li><li>Microsoft 365 / SharePoint</li><li>Web (HTML/CSS)</li></ul>
-<h2>Roles I'm looking for</h2>
-<ul class="tags"><li>Infrastructure Engineer</li><li>Site Reliability Engineer</li><li>Systems Engineer</li><li>Platform Engineer</li><li>DevOps Engineer</li><li>Automation Engineer</li><li>Internal Tools Engineer</li><li>IT Operations Engineer</li><li>Technical Support Engineer (escalation)</li><li>Solutions Engineer</li></ul>
-<h2>Background</h2>
-<div class="item"><h3>Infrastructure &amp; automation — independent</h3><p class="meta">2026 – present</p><p>Designing and operating a multi-machine private environment: automated backups, monitoring, self-healing services, and local AI inference.</p></div><div class="item"><h3>Lighting quotations specialist</h3><p class="meta">2026 – present</p><p>Technical quoting for the lighting industry. Built internal pages and tools on my own initiative for the team I work with.</p></div><div class="item"><h3>Content &amp; marketing specialist — nonprofit health data organisation</h3><p class="meta">2022 – 2026</p><p>Ran the internal intranet and CRM spaces a whole staff relied on. Translated complex technical capability into language people could act on.</p></div><div class="item"><h3>Creative services &amp; real-time desk — regional broadcast</h3><p class="meta">2015 – 2021</p><p>Live production and content under deadline.</p></div><div class="item"><h3>B.S., Broadcasting &amp; Communications — University of Nebraska at Omaha</h3><p class="meta">magna cum laude</p><p>Plus a decade of direct support and hardware repair work.</p></div>
+<section class="sec flow"><h2>What I do</h2><div class="sec-body"><p>I design, build, and run a private compute environment end to end — self-healing services, scheduled automation, monitoring that tells me when something is wrong, encrypted backups, and locally-hosted AI models. It spans several machines and it stays up on its own.</p><p>Before that, and alongside it, I built the internal tools people actually use day to day: intranet spaces, CRM pages, and small utilities that remove repeated manual work. The hard part of an internal tool is rarely the technology — it's understanding the work well enough that nobody needs training to use it.</p></div></section>
+<section class="sec flow"><h2>How I work</h2><div class="sec-body"><p>A claim you can't execute is a guess. Everything I build has a test that tries to break it, and nothing counts as working until that test passes. I reboot the machine rather than assume the service comes back.</p><p>I use AI models as a force multiplier and say so plainly. They collapse the distance between not understanding something and having a working version to test. They don't decide what to build, and they don't carry the responsibility when the result is wrong — that part stays mine.</p></div></section>
+<section class="sec flow"><h2>Working with</h2><div class="sec-body"><ul class="tags"><li>Linux</li><li>Containers</li><li>systemd</li><li>Mesh networking</li><li>Monitoring &amp; alerting</li><li>Encrypted backups</li><li>Bash &amp; Python</li><li>Self-hosted LLMs</li><li>Hardware &amp; imaging</li><li>Microsoft 365 / SharePoint</li><li>Web (HTML/CSS)</li></ul></div></section>
+<section class="sec items"><h2>Selected work</h2><div class="sec-body"><div class="item"><h3>A private environment that runs itself</h3><p class="meta">ongoing</p><p>Several machines operating as one system: services that restart themselves when they fail, scheduled jobs that keep running whether or not anyone is watching, and alerting that reaches my phone when something needs a human. Measured by how rarely I have to touch it.</p></div><div class="item"><h3>Encrypted backup and restore, end to end</h3><p class="meta">ongoing</p><p>Automated encrypted backups with offsite copies, and — the part most backup setups skip — restores that get tested. A backup nobody has restored from is a rumour, not a backup.</p></div><div class="item"><h3>Continuous integrity checking</h3><p class="meta">ongoing</p><p>Scheduled verification that the machines are in the state I left them in, with anything unexpected surfaced rather than logged and forgotten. Built after learning the hard way that a check which can't fail is not a check.</p></div><div class="item"><h3>Hardware-key authentication across the estate</h3><p class="meta">2026</p><p>Phishing-resistant hardware-key sign-in standardised across services, so access depends on something physically in hand rather than a password that can be replayed.</p></div><div class="item"><h3>Locally-hosted AI inference</h3><p class="meta">ongoing</p><p>Language models running on my own hardware, so the capability works with no external service in the loop and nothing leaving the network.</p></div><div class="item"><h3>Internal tools people actually use</h3><p class="meta">ongoing</p><p>Dashboards, generators, and small utilities that remove repeated manual work. The measure I care about is whether anyone needed training.</p></div></div></section>
+<section class="sec flow"><h2>Roles I'm looking for</h2><div class="sec-body"><ul class="tags"><li>Infrastructure Engineer</li><li>Site Reliability Engineer</li><li>Systems Engineer</li><li>Platform Engineer</li><li>DevOps Engineer</li><li>Automation Engineer</li><li>Internal Tools Engineer</li><li>IT Operations Engineer</li><li>Technical Support Engineer (escalation)</li><li>Solutions Engineer</li></ul></div></section>
+<section class="sec items"><h2>Background</h2><div class="sec-body"><div class="item"><h3>Infrastructure &amp; automation — independent</h3><p class="meta">2026 – present</p><p>Designing and operating a multi-machine private environment: automated backups, monitoring, self-healing services, and local AI inference.</p></div><div class="item"><h3>Lighting quotations specialist</h3><p class="meta">2026 – present</p><p>Technical quoting for the lighting industry. Built internal pages and tools on my own initiative for the team I work with.</p></div><div class="item"><h3>Content &amp; marketing specialist — nonprofit health data organisation</h3><p class="meta">2022 – 2026</p><p>Ran the internal intranet and CRM spaces a whole staff relied on. Translated complex technical capability into language people could act on.</p></div><div class="item"><h3>Creative services &amp; real-time desk — regional broadcast</h3><p class="meta">2015 – 2021</p><p>Live production and content under deadline.</p></div><div class="item"><h3>B.S., Broadcasting &amp; Communications — University of Nebraska at Omaha</h3><p class="meta">magna cum laude</p><p>Plus a decade of direct support and hardware repair work.</p></div></div></section>
+<section class="sec flow"><h2>Profile</h2><div class="sec-body"><a class="li" href="https://www.linkedin.com/in/matthhaave" rel="noopener"><span class="mark" aria-hidden="true">in</span><span class="txt"><b>Matt Haave</b><span>linkedin.com/in/matthhaave</span></span><span class="go">Open &rarr;</span></a></div></section>
 <h2>Contact</h2><ul class="contact">
 <li><span class="k">Email</span><a href="mailto:matthaave83@gmail.com">matthaave83@gmail.com</a></li>
 <li><span class="k">LinkedIn</span><a href="https://www.linkedin.com/in/matthhaave" rel="noopener">linkedin.com/in/matthhaave</a></li>
