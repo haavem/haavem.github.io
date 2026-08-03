@@ -1,0 +1,80 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Matthew Haave — Infrastructure &amp; Automation</title>
+<meta name="description" content="I build and operate systems, and I care most about the part where they keep running without anyone watching. Twenty years around technology and the pe">
+<style>
+:root{--bg:#f3f6f6;--panel:#fff;--ink:#16232a;--soft:#48595f;--faint:#71858d;
+  --accent:#0f7d8c;--line:#dae3e4;--warn:#8a6212;
+  --sans:"Segoe UI",Roboto,"Helvetica Neue","DejaVu Sans",Arial,sans-serif;
+  --mono:ui-monospace,"DejaVu Sans Mono",Menlo,Consolas,monospace}
+@media(prefers-color-scheme:dark){:root{--bg:#0f1a1f;--panel:#17252b;--ink:#e7eef0;
+  --soft:#a5b6bd;--faint:#7e929a;--accent:#41b6c6;--line:#25353c;--warn:#d9a441}}
+
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--sans);
+  line-height:1.65;-webkit-font-smoothing:antialiased;overflow-wrap:break-word}
+img{max-width:100%;height:auto}
+.wrap{max-width:44rem;margin:0 auto;padding:3.5rem 1.4rem 5rem}
+a{color:var(--accent);text-underline-offset:2px}
+a:focus-visible{outline:2px solid var(--accent);outline-offset:3px;border-radius:3px}
+
+header{display:flex;gap:1.4rem;align-items:center;flex-wrap:wrap;
+  padding-bottom:1.8rem;border-bottom:1px solid var(--line)}
+.avatar{width:104px;height:104px;border-radius:50%;object-fit:cover;flex:none;
+  border:3px solid var(--panel);box-shadow:0 4px 18px rgba(0,0,0,.16)}
+.who{flex:1 1 16rem;min-width:0}
+h1{font-size:1.95rem;letter-spacing:-.022em;margin:0 0 .15rem;line-height:1.12}
+.role{margin:0;color:var(--accent);font-weight:650;font-size:1rem}
+.where{margin:.25rem 0 0;color:var(--faint);font-size:.88rem;font-family:var(--mono)}
+
+.lede{font-size:1.1rem;color:var(--soft);margin:2rem 0 0}
+h2{font-size:.72rem;font-family:var(--mono);letter-spacing:.15em;text-transform:uppercase;
+  color:var(--accent);font-weight:700;margin:2.8rem 0 .9rem}
+p{margin:0 0 1rem}
+
+.item{padding:0 0 0 1.1rem;border-left:2px solid var(--line);margin-bottom:1.5rem}
+.item h3{margin:0;font-size:1.02rem}
+.item .meta{margin:.1rem 0 .5rem;font-family:var(--mono);font-size:.78rem;color:var(--faint)}
+.item p{margin:0;color:var(--soft);font-size:.96rem}
+
+.tags{display:flex;flex-wrap:wrap;gap:.45rem;padding:0;margin:0;list-style:none}
+.tags li{font-size:.85rem;color:var(--soft);background:var(--panel);
+  border:1px solid var(--line);border-radius:2rem;padding:.32rem .8rem}
+
+.contact{display:flex;flex-wrap:wrap;gap:.6rem 1.4rem;margin:.4rem 0 0;padding:0;list-style:none}
+.contact li{font-size:.95rem}
+.contact .k{font-family:var(--mono);font-size:.7rem;letter-spacing:.1em;text-transform:uppercase;
+  color:var(--faint);display:block}
+
+footer{margin-top:3.5rem;padding-top:1.4rem;border-top:1px solid var(--line);
+  font-family:var(--mono);font-size:.75rem;color:var(--faint)}
+.todo{font-size:.9rem;color:var(--faint);border-left:2px solid var(--warn);
+  padding-left:.9rem;margin:1rem 0}
+@media (prefers-reduced-motion:reduce){*{transition:none!important;animation:none!important}}
+@media (max-width:34rem){
+  .wrap{padding:2.4rem 1.15rem 3.5rem}
+  h1{font-size:1.6rem}
+  .avatar{width:82px;height:82px}
+  body{font-size:15.5px}
+}
+</style></head><body><div class="wrap">
+<header>
+<img class="avatar" src="matt-headshot-400.jpg" alt="Portrait of Matthew Haave" width="104" height="104">
+<div class="who"><h1>Matthew Haave</h1><p class="role">Infrastructure · Automation · Systems</p><p class="where">Omaha metro, Nebraska · open to remote</p></div></header>
+<p class="lede">I build and operate systems, and I care most about the part where they keep running without anyone watching. Twenty years around technology and the people who use it; the last stretch spent going deep on infrastructure.</p>
+<h2>What I do</h2>
+<p>I design, build, and run a private compute environment end to end — self-healing services, scheduled automation, monitoring that tells me when something is wrong, encrypted backups, and locally-hosted AI models. It spans several machines and it stays up on its own.</p><p>Before that, and alongside it, I built the internal tools people actually use day to day: intranet spaces, CRM pages, and small utilities that remove repeated manual work. The hard part of an internal tool is rarely the technology — it's understanding the work well enough that nobody needs training to use it.</p>
+<h2>How I work</h2>
+<p>A claim you can't execute is a guess. Everything I build has a test that tries to break it, and nothing counts as working until that test passes. I reboot the machine rather than assume the service comes back.</p><p>I use AI models as a force multiplier and say so plainly. They collapse the distance between not understanding something and having a working version to test. They don't decide what to build, and they don't carry the responsibility when the result is wrong — that part stays mine.</p>
+<h2>Working with</h2>
+<ul class="tags"><li>Linux</li><li>Containers</li><li>systemd</li><li>Mesh networking</li><li>Monitoring &amp; alerting</li><li>Encrypted backups</li><li>Bash &amp; Python</li><li>Self-hosted LLMs</li><li>Hardware &amp; imaging</li><li>Microsoft 365 / SharePoint</li><li>Web (HTML/CSS)</li></ul>
+<h2>Background</h2>
+<div class="item"><h3>Infrastructure &amp; automation — independent</h3><p class="meta">2026 – present</p><p>Designing and operating a multi-machine private environment: automated backups, monitoring, self-healing services, and local AI inference.</p></div><div class="item"><h3>Lighting quotations specialist</h3><p class="meta">2026 – present</p><p>Technical quoting for the lighting industry. Built internal pages and tools on my own initiative for the team I work with.</p></div><div class="item"><h3>Content &amp; marketing specialist — nonprofit health data organisation</h3><p class="meta">2022 – 2026</p><p>Ran the internal intranet and CRM spaces a whole staff relied on. Translated complex technical capability into language people could act on.</p></div><div class="item"><h3>Creative services &amp; real-time desk — regional broadcast</h3><p class="meta">2015 – 2021</p><p>Live production and content under deadline.</p></div><div class="item"><h3>B.S., Broadcasting &amp; Communications — University of Nebraska at Omaha</h3><p class="meta">magna cum laude</p><p>Plus a decade of direct support and hardware repair work.</p></div>
+<h2>Contact</h2><ul class="contact">
+<li><span class="k">Email</span><a href="mailto:matthaave83@gmail.com">matthaave83@gmail.com</a></li>
+<li><span class="k">LinkedIn</span><a href="https://www.linkedin.com/in/matthhaave" rel="noopener">linkedin.com/in/matthhaave</a></li>
+<li><span class="k">Based in</span>Omaha metro, Nebraska</li>
+</ul>
+<footer>Matthew Haave &middot; Omaha metro, Nebraska</footer>
+</div></body></html>
